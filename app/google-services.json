@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1081799051041",
+    "firebase_url": "https://sparkoutmachinetask.firebaseio.com",
+    "project_id": "sparkoutmachinetask",
+    "storage_bucket": "sparkoutmachinetask.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1081799051041:android:d746c3cc66aaea7a592060",
+        "android_client_info": {
+          "package_name": "com.imtamila.sparkoutmachinetask"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1081799051041-qnfeflavsgjdpkt4216eo18e2s5m1ki6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDjekhm8qnxO3njtFvIJ0QmUJJxM6SOdPw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1081799051041-qnfeflavsgjdpkt4216eo18e2s5m1ki6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

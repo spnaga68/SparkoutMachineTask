@@ -1,0 +1,95 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'com.google.gms.google-services'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.2"
+
+    defaultConfig {
+        applicationId "com.imtamila.sparkoutmachinetask"
+        minSdkVersion 21
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    dataBinding {
+        enabled = true
+    }
+    androidExtensions {
+        experimental = true
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlinVersion"
+    implementation "androidx.appcompat:appcompat:$appCompat"
+    implementation "androidx.core:core-ktx:$coreKtx"
+    implementation "androidx.constraintlayout:constraintlayout:$constraintLayout"
+    implementation "com.google.android.material:material:$material"
+    //Recyclerview
+    implementation "androidx.recyclerview:recyclerview:$recyclerView"
+    //ViewPager2
+    implementation "androidx.viewpager2:viewpager2:$viewPager2"
+
+    //Remote Api components
+    implementation "com.squareup.retrofit2:retrofit:$retrofit"
+    implementation "com.squareup.retrofit2:converter-gson:$converterGson"
+    implementation "com.squareup.okhttp3:logging-interceptor:$interceptor"
+
+    //Lifecycle components
+    implementation "androidx.lifecycle:lifecycle-extensions:$lifecycleVersion"
+
+    //Google map - Components
+    implementation "com.google.android.gms:play-services-location:$location"
+    implementation "com.google.android.gms:play-services-maps:$location"
+    implementation "com.google.maps.android:android-maps-utils:$mapUtils"
+
+    //Google Auth
+    implementation "com.google.android.gms:play-services-auth:$googleAuth"
+
+    //Firebase - Components
+    implementation "com.google.firebase:firebase-database-ktx:$firebaseDatabase"
+
+    //Gson
+    implementation "com.google.code.gson:gson:$gson"
+
+    //Glide
+    implementation "com.github.bumptech.glide:glide:$glide"
+    kapt "com.github.bumptech.glide:compiler:$glide"
+
+    //Coroutines
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutines"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutines"
+
+    //Room
+    implementation "androidx.room:room-runtime:$room"
+    implementation "androidx.legacy:legacy-support-v4:$legacy"
+    kapt "androidx.room:room-compiler:$room"
+
+    //stetho to debug
+    implementation 'com.facebook.stetho:stetho-okhttp3:1.5.0'
+
+    //Testing components
+    testImplementation "junit:junit:$jUnit"
+    androidTestImplementation "androidx.test.ext:junit:$jUnitExt"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$espressoCore"
+}

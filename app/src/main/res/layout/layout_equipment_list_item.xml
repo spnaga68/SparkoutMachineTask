@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="equipmentData"
+            type="com.imtamila.sparkoutmachinetask.EquipmentData" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/layoutGroup"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@color/headerBackground"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/dp8"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivEquipment"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                app:imageFromUrl="@{equipmentData.image}"
+                tools:background="@color/colorAccent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvEquipmentName"
+                style="@style/TextAppearance.MaterialComponents.Headline6"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp4"
+                android:layout_weight="1"
+                android:text="@{equipmentData.name}"
+                android:textColor="@android:color/white"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                tools:text="Compact Track Leaders" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivDropArrow"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:padding="@dimen/dp10"
+                app:srcCompat="@drawable/ic_keyboard_arrow_down_black_24dp" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/layoutChild"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layoutGroup" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
